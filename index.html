@@ -19,6 +19,38 @@ padding:0;
 box-sizing:border-box;
 }
 
+.logo-area{
+position:relative;
+display:inline-block;
+overflow:hidden;
+}
+
+.logo-area::after{
+content:'';
+position:absolute;
+top:0;
+left:-150%;
+width:50%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.8),
+transparent
+);
+transform:skewX(-25deg);
+animation:shine 2s infinite;
+}
+
+@keyframes shine{
+0%{
+left:-150%;
+}
+100%{
+left:200%;
+}
+}
+
 .logo-mpoid{
 width:45%;
 max-width:150px;
