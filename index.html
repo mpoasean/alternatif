@@ -60,29 +60,18 @@ height:auto;
 display:block;
 }
 
-.typing{
-display:inline-block;
-max-width:100%;
-overflow:hidden;
+.running-text{
 white-space:nowrap;
-border-right:3px solid #fff;
-animation:
-typing 4s steps(50,end) infinite,
-cursor .8s step-end infinite;
+display:inline-block;
+animation:marquee 12s linear infinite;
 }
 
-@keyframes typing{
+@keyframes marquee{
 0%{
-width:0;
-}
-40%{
-width:100%;
-}
-60%{
-width:100%;
+transform:translateX(100%);
 }
 100%{
-width:0;
+transform:translateX(-100%);
 }
 }
 
